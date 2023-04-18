@@ -1,0 +1,15 @@
+/***************************************
+************ GENERAL STYLES ************
+***************************************/
+:root{
+    --grey:#e5e5e5;
+    --light-grey:#f8f9fa;
+    --dark-grey:#6c757d;
+    --blue:#1b72e8;
+    --dark-blue:#165bba;
+    --white:#ffffff;
+    --black:#000000;
+    --green:#198754;
+    --red:#dc3545;
+    --yellow:#ffc107;
+}
