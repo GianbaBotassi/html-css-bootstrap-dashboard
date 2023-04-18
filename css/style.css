@@ -16,10 +16,14 @@
 } */
 body{
     font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
 }
 ul{
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
+
 /***************************************
 ************ LAYOUT ************
 ***************************************/
@@ -37,22 +41,39 @@ ul{
 /* HEADER */
 
 header{
+    height: 4rem;
     width: 100%;
-    background-color: var(--bs-gray300);
+    background-color: var(--bs-gray-300);
     position: fixed;
     z-index: 999;
     left: 0;
     top: 0;
 }
-header .container-fluid .row{
+#big_logo img{
+    max-width: 100%;
+    height: 2rem;
+}
+#small_logo img{
+    max-width: 100%;
     height: 3rem;
-    background-color: var(--bs-white);
+}
+header ul{
+    padding: 0 1rem 0 2rem;
+}
+header ul li i:before{
+    display: table-cell;
+    height: 2rem;
+    vertical-align: middle;
+}
+header input{
+    background-color: black;
 }
 
 /* BOTTOM CONTAINER */
 
 #bottom_cont{
     height: 100vh;
+    padding-top: 4rem;
 }
 
 /* SIDEBAR */
@@ -60,22 +81,31 @@ header .container-fluid .row{
 .side_bar{
     background-image: url(../img/sidebar-bg.png);
     background-color: var(--bs-dark);
-    padding: 4rem 2rem 2rem 2rem;
     color: var(--bs-white);
 }
 #side_bar{
     min-width: 8rem;
+    padding: 1rem 2rem;
 }
 #side_bar_xs{
-    min-width: 2rem;
+    min-width: 1rem;
+    padding:1rem;
 }
-.side_bar ul{
-    margin: 0;
-    padding: 0;
-}
+
 
 /* CONTENTS */
 
+#contents{
+    width: 100%;
+    background-color: var(--bs-gray300);
+    color: var(--bs-black);
+    overflow-y: scroll;
+}
+#contents img{
+    max-width: 100%;
+    height: 2rem;
+    width: 2rem;
+}
 
 
 
@@ -91,9 +121,6 @@ header .container-fluid .row{
 
 
 /* DEBUG */
-#bottom_cont{
-    background-color: green;
-}
 
 
 [class*="col"]{
@@ -102,8 +129,3 @@ header .container-fluid .row{
 
 
 
-#contents{
-    background-color: var(--bs-gray300);
-    color: var(--bs-black);
-    overflow-y: scroll;
-}

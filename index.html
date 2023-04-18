@@ -14,23 +14,32 @@
 <body>
     <!-- HEADER -->
 
-    <header>
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-auto"><img src="img/logo.svg" alt=""></div>
-                <div class="col">ciaooo</div>
-                <div class="col-auto">icone</div>
-            </div>
-        </div>
+    <header class="">
+        <nav class="navbar">  
+            <a class="navbar-brand px-3" href="#">
+                <div id="big_logo" class="col-auto d-none d-md-flex"><img src="img/logo.svg" alt="Big Logo"></div>
+                <div id="small_logo" class="col-auto d-md-none"><img src="img/mobile-logo.png" alt="Mobile Logo"></div>
+            </a>
+            <form class="col form-inline my-1">
+                <input class="form-control border-0" type="search" placeholder="Search" aria-label="Search">
+
+              </form>
+              <ul class="col-auto row g-3 px-3">
+                <li class="col d-none d-md-flex"><i class="fa-solid fa-list-ul"></i></li>
+                <li class="col d-none d-md-flex"><i class="fa-solid fa-circle-question"></i></li>
+                <li class="col d-none d-md-flex"><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                <li class="col"><i class="fa-solid fa-bell text-warning"></i></li>
+            </ul>
+          </nav> 
     </header>
 
     <!-- MAIN SECTION -->
     
-    <main id="bottom_cont" class="d-flex">
+    <main id="bottom_cont" class="d-flex g-0 px-0">
 
         <!-- SIDEBAR -->
 
-        <div id="side_bar" class="side_bar d-none d-sm-flex flex-column justify-content-between">
+        <div id="side_bar" class="side_bar d-none d-md-flex flex-column justify-content-between">
             <ul>
                 <li>Home</li>
                 <li>Stats</li>
@@ -38,7 +47,7 @@
             </ul>
             <div>Home</div>
         </div>
-        <div id="side_bar_xs" class="side_bar d-sm-none d-flex flex-column justify-content-between">
+        <div id="side_bar_xs" class="side_bar d-md-none d-flex flex-column justify-content-between">
             <ul>
                 <li>cio</li>
                 <li>sdffds</li>
@@ -50,30 +59,82 @@
         <!-- CONTENTS -->
 
         <div id="contents">
-            <!-- <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eaque id, dicta earum ratione ex asperiores repellendus, tenetur error accusantium veniam quod eligendi iste totam, eius impedit neque blanditiis quia!</div>
-            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eaque id, dicta earum ratione ex asperiores repellendus, tenetur error accusantium veniam quod eligendi iste totam, eius impedit neque blanditiis quia!</div>
-            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eaque id, dicta earum ratione ex asperiores repellendus, tenetur error accusantium veniam quod eligendi iste totam, eius impedit neque blanditiis quia!</div>
-            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eaque id, dicta earum ratione ex asperiores repellendus, tenetur error accusantium veniam quod eligendi iste totam, eius impedit neque blanditiis quia!</div>
-            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eaque id, dicta earum ratione ex asperiores repellendus, tenetur error accusantium veniam quod eligendi iste totam, eius impedit neque blanditiis quia!</div>
-            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eaque id, dicta earum ratione ex asperiores repellendus, tenetur error accusantium veniam quod eligendi iste totam, eius impedit neque blanditiis quia!</div>
-            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eaque id, dicta earum ratione ex asperiores repellendus, tenetur error accusantium veniam quod eligendi iste totam, eius impedit neque blanditiis quia!</div>
-            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eaque id, dicta earum ratione ex asperiores repellendus, tenetur error accusantium veniam quod eligendi iste totam, eius impedit neque blanditiis quia!</div>
-            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eaque id, dicta earum ratione ex asperiores repellendus, tenetur error accusantium veniam quod eligendi iste totam, eius impedit neque blanditiis quia!</div>
-            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eaque id, dicta earum ratione ex asperiores repellendus, tenetur error accusantium veniam quod eligendi iste totam, eius impedit neque blanditiis quia!</div>
-            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eaque id, dicta earum ratione ex asperiores repellendus, tenetur error accusantium veniam quod eligendi iste totam, eius impedit neque blanditiis quia!</div>
-            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eaque id, dicta earum ratione ex asperiores repellendus, tenetur error accusantium veniam quod eligendi iste totam, eius impedit neque blanditiis quia!</div>
-            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eaque id, dicta earum ratione ex asperiores repellendus, tenetur error accusantium veniam quod eligendi iste totam, eius impedit neque blanditiis quia!</div>
-            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eaque id, dicta earum ratione ex asperiores repellendus, tenetur error accusantium veniam quod eligendi iste totam, eius impedit neque blanditiis quia!</div>
-            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eaque id, dicta earum ratione ex asperiores repellendus, tenetur error accusantium veniam quod eligendi iste totam, eius impedit neque blanditiis quia!</div>
-            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eaque id, dicta earum ratione ex asperiores repellendus, tenetur error accusantium veniam quod eligendi iste totam, eius impedit neque blanditiis quia!</div>
-            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eaque id, dicta earum ratione ex asperiores repellendus, tenetur error accusantium veniam quod eligendi iste totam, eius impedit neque blanditiis quia!</div>
-            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eaque id, dicta earum ratione ex asperiores repellendus, tenetur error accusantium veniam quod eligendi iste totam, eius impedit neque blanditiis quia!</div>
-            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eaque id, dicta earum ratione ex asperiores repellendus, tenetur error accusantium veniam quod eligendi iste totam, eius impedit neque blanditiis quia!</div>
-            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eaque id, dicta earum ratione ex asperiores repellendus, tenetur error accusantium veniam quod eligendi iste totam, eius impedit neque blanditiis quia!</div>
-            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eaque id, dicta earum ratione ex asperiores repellendus, tenetur error accusantium veniam quod eligendi iste totam, eius impedit neque blanditiis quia!</div>
-            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eaque id, dicta earum ratione ex asperiores repellendus, tenetur error accusantium veniam quod eligendi iste totam, eius impedit neque blanditiis quia!</div>
-            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eaque id, dicta earum ratione ex asperiores repellendus, tenetur error accusantium veniam quod eligendi iste totam, eius impedit neque blanditiis quia!</div> -->
+            <div class="col-12 row g-0">
+                <div class="col">BOOLEAN Briciole pane</div>
+                <div class="col">
+                    <div>Studenti online ultimi minuti</div>
+                    <div>125</div>
+                </div>
+                <div class="col">Nuovo studente +</div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div id="left_col" class="col-md-12 col-lg-8">
+                        <div id="next-class">
+                            <h3>Prossime classi</h3>
+                            <!-- <div class="container-fluid">
+                                <ul class="row border-bottom pb-1 text-secondary">
+                                    <li class="col">Nome</li>
+                                    <li class="col-lg-8 col-xl-6">
+                                        <ul class="row">
+                                            <li class="col">Data inizio</li>
+                                            <li class="col">ROI</li>
+                                            <li class="col">Stato</li>
+                                            <li class="col">Azioni</li>
+                                        </ul>
+                                    </li>    
+                                </ul>
+                            </div> -->
+                            <div class="container-fluid">
+                                <ul class="row py-1">
+                                    <li class="col"><img src="img/class-avatar.jpg" alt="Avatar"> Nome</li>
+                                    <li class="col-sm-8 col-md-6 col-lg-8 col-xl-8 text-center">
+                                        <ul class="row">
+                                            <li class="d-none d-md-block">15 Feb 2021</li>
+                                            <li class="d-non d-sm-block">20%</li>
+                                            <li class="col"><span class="bg-success rounded text-white p-1">Done</span></li>
+                                            <li class="col">Azioni</li>
+                                        </ul> 
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="left_col" class="col-md-12 col-lg-4"></div>
+                </div>
+            </div>
+            <!-- <div class="container">
+                <div class="row">
+                    <div id="left_col" class="col-8">
+                        <div id="next_class">
+                            <div class="container">
+                                <div class="row">
+                                    <ul class="col 8">
+                                        <li>Nome</li>
+                                        <li>Nome</li>
+                                        <li>Nome</li>
+                                        <li>Nome</li>
+                                        <li>Nome</li>
+                                        <li>Nome</li>
+                                        <li>Nome</li>
+                                        <li>Nome</li>
+                                        <li>Nome</li>
+                                        <li>Nome</li>
+                                    </ul>
+                                    <div class="row">
+                                        <div class="col"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="left_col" class="col-4"></div>
+                </div>
+            </div> -->
+
+
         </div>
+        
     </main>
     
 
