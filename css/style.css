@@ -1,15 +1,109 @@
 /***************************************
 ************ GENERAL STYLES ************
 ***************************************/
-:root{
+/* :root{
     --grey:#e5e5e5;
     --light-grey:#f8f9fa;
     --dark-grey:#6c757d;
-    --blue:#1b72e8;
-    --dark-blue:#165bba;
+    --sky-blue:#1b72e8;
+    --blue:#165bba;
     --white:#ffffff;
     --black:#000000;
     --green:#198754;
     --red:#dc3545;
     --yellow:#ffc107;
+    --dark-blue:#051e34;
+} */
+body{
+    font-family: 'Roboto', sans-serif;
+}
+ul{
+    list-style-type: none;
+}
+/***************************************
+************ LAYOUT ************
+***************************************/
+
+
+
+
+
+
+
+/***************************************
+************ SITE SECTION ************
+***************************************/
+
+/* HEADER */
+
+header{
+    width: 100%;
+    background-color: var(--bs-gray300);
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+}
+header .container-fluid .row{
+    height: 3rem;
+    background-color: var(--bs-white);
+}
+
+/* BOTTOM CONTAINER */
+
+#bottom_cont{
+    height: 100vh;
+}
+
+/* SIDEBAR */
+
+.side_bar{
+    background-image: url(../img/sidebar-bg.png);
+    background-color: var(--bs-dark);
+    padding: 4rem 2rem 2rem 2rem;
+    color: var(--bs-white);
+}
+#side_bar{
+    min-width: 8rem;
+}
+#side_bar_xs{
+    min-width: 2rem;
+}
+.side_bar ul{
+    margin: 0;
+    padding: 0;
+}
+
+/* CONTENTS */
+
+
+
+
+
+
+
+/***************************************
+************ GENERAL STYLES ************
+***************************************/
+
+
+
+
+
+/* DEBUG */
+#bottom_cont{
+    background-color: green;
+}
+
+
+[class*="col"]{
+    border:1px solid black;
+}
+
+
+
+#contents{
+    background-color: var(--bs-gray300);
+    color: var(--bs-black);
+    overflow-y: scroll;
 }
