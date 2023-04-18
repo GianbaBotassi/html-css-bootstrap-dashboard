@@ -59,80 +59,210 @@
         <!-- CONTENTS -->
 
         <div id="contents">
-            <div class="col-12 row g-0">
-                <div class="col">BOOLEAN Briciole pane</div>
-                <div class="col">
-                    <div>Studenti online ultimi minuti</div>
-                    <div>125</div>
-                </div>
-                <div class="col">Nuovo studente +</div>
-            </div>
-            <div class="container-fluid">
-                <div class="row">
-                    <div id="left_col" class="col-md-12 col-lg-8">
-                        <div id="next-class">
-                            <h3>Prossime classi</h3>
-                            <!-- <div class="container-fluid">
-                                <ul class="row border-bottom pb-1 text-secondary">
-                                    <li class="col">Nome</li>
-                                    <li class="col-lg-8 col-xl-6">
-                                        <ul class="row">
-                                            <li class="col">Data inizio</li>
-                                            <li class="col">ROI</li>
-                                            <li class="col">Stato</li>
-                                            <li class="col">Azioni</li>
-                                        </ul>
-                                    </li>    
-                                </ul>
-                            </div> -->
-                            <div class="container-fluid">
-                                <ul class="row py-1">
-                                    <li class="col"><img src="img/class-avatar.jpg" alt="Avatar"> Nome</li>
-                                    <li class="col-sm-8 col-md-6 col-lg-8 col-xl-8 text-center">
-                                        <ul class="row">
-                                            <li class="d-none d-md-block">15 Feb 2021</li>
-                                            <li class="d-non d-sm-block">20%</li>
-                                            <li class="col"><span class="bg-success rounded text-white p-1">Done</span></li>
-                                            <li class="col">Azioni</li>
-                                        </ul> 
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+
+            <!-- TOP BAR -->
+
+            <div id="top_content_bar" class="col-12 row g-0 text-white px-1 py-3 g-3">
+                <div id="breadcrumb" class="col-12 col-md">
+                    <div>
+                        <h3 class="d-inline-block">Boolean</h3>
+                        <small class="rounded p-1">Piano blaze</small>    
                     </div>
-                    <div id="left_col" class="col-md-12 col-lg-4"></div>
+                    <div>
+                        <small class="rounded p-1">3 app</small>
+                        <i class="fa-solid fa-angles-right"></i>
+                        <small class="d-lg-none rounded-circle py-1 px-2">+</small>
+                        <small class="d-none d-lg-inline rounded p-1">Boolean mobile app</small>
+                        <small class="d-none d-lg-inline rounded p-1">Boolean web app</small>
+                        <small class="d-none d-lg-inline rounded p-1">Boolean blog app</small>
+                    </div>
+                </div>
+                <div class="col-12 col-md">
+                    <div class="pb-2">Studenti online negli ultimi 30 minuti</div>
+                    <h3>125</h3>
+                </div>
+                <div class="col-12 col-md-auto">
+                    <span>Nuovo Studente</span>
+                    <span class="plus rounded border">+</span>
                 </div>
             </div>
-            <!-- <div class="container">
+
+            <!-- 2 COLUMN SECTION -->
+
+            <div class="container-fluid px-2 py-4">
                 <div class="row">
-                    <div id="left_col" class="col-8">
-                        <div id="next_class">
-                            <div class="container">
-                                <div class="row">
-                                    <ul class="col 8">
-                                        <li>Nome</li>
-                                        <li>Nome</li>
-                                        <li>Nome</li>
-                                        <li>Nome</li>
-                                        <li>Nome</li>
-                                        <li>Nome</li>
-                                        <li>Nome</li>
-                                        <li>Nome</li>
-                                        <li>Nome</li>
-                                        <li>Nome</li>
+
+                    <!-- LEFT COLUMN -->
+
+                    <div id="left_col" class="col-md-12 col-lg-8">
+
+                        <!-- NEXT CLASS CONTAINER -->
+
+                        <div id="next_class" class="border rounded">
+                            <h3 class="p-2 border-0 border-bottom">Prossime classi</h3>
+                                <div class="container-fluid">
+                                    <ul class="row py-1 text-secondary border-bottom">
+                                        <li class="col"> Nome</li>
+                                        <li class="col-6 col-sm-8 col-md-8 col-lg-9 col-xl-8 text-center">
+                                            <ul class="row py-1">
+                                                <li class="d-none d-md-flex col">Data inizio</li>
+                                                <li class="d-none d-sm-flex col">ROI</li>
+                                                <li class="col">Stato</li>
+                                                <li class="col">Azioni</li>
+                                            </ul> 
+                                        </li>
                                     </ul>
-                                    <div class="row">
-                                        <div class="col"></div>
-                                    </div>
+                                </div>
+                                <div class="container-fluid">
+                                    <ul class="row py-1 border-bottom">
+                                        <li class="col"><img src="img/class-avatar.jpg" alt="Avatar"> Classe 75</li>
+                                        <li class="col-6 col-sm-8 col-md-8 col-lg-9 col-xl-8 text-center">
+                                            <ul class="row py-1">
+                                                <li class="d-none d-md-flex col">15 Feb 2021</li>
+                                                <li class="d-none d-sm-flex col">20%</li>
+                                                <li class="col"><small class="bg-success rounded text-white p-1">Done</small></li>
+                                                <li class="col">Azioni</li>
+                                            </ul> 
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="container-fluid">
+                                    <ul class="row py-1 border-bottom">
+                                        <li class="col"><img src="img/class-avatar.jpg" alt="Avatar"> Classe 75</li>
+                                        <li class="col-6 col-sm-8 col-md-8 col-lg-9 col-xl-8 text-center">
+                                            <ul class="row py-1">
+                                                <li class="d-none d-md-flex col">15 Feb 2021</li>
+                                                <li class="d-none d-sm-flex col">20%</li>
+                                                <li class="col"><small class="bg-success rounded text-white p-1">Done</small></li>
+                                                <li class="col">Azioni</li>
+                                            </ul> 
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="container-fluid">
+                                    <ul class="row py-1 border-bottom">
+                                        <li class="col"><img src="img/class-avatar.jpg" alt="Avatar"> Classe 75</li>
+                                        <li class="col-6 col-sm-8 col-md-8 col-lg-9 col-xl-8 text-center">
+                                            <ul class="row py-1">
+                                                <li class="d-none d-md-flex col">15 Feb 2021</li>
+                                                <li class="d-none d-sm-flex col">20%</li>
+                                                <li class="col"><small class="bg-success rounded text-white p-1">Done</small></li>
+                                                <li class="col">Azioni</li>
+                                            </ul> 
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="container-fluid">
+                                    <ul class="row py-1 border-bottom">
+                                        <li class="col"><img src="img/class-avatar.jpg" alt="Avatar"> Classe 75</li>
+                                        <li class="col-6 col-sm-8 col-md-8 col-lg-9 col-xl-8 text-center">
+                                            <ul class="row py-1">
+                                                <li class="d-none d-md-flex col">15 Feb 2021</li>
+                                                <li class="d-none d-sm-flex col">20%</li>
+                                                <li class="col"><small class="bg-success rounded text-white p-1">Done</small></li>
+                                                <li class="col">Azioni</li>
+                                            </ul> 
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="container-fluid">
+                                    <ul class="row py-1 border-bottom">
+                                        <li class="col"><img src="img/class-avatar.jpg" alt="Avatar"> Classe 75</li>
+                                        <li class="col-6 col-sm-8 col-md-8 col-lg-9 col-xl-8 text-center">
+                                            <ul class="row py-1">
+                                                <li class="d-none d-md-flex col">15 Feb 2021</li>
+                                                <li class="d-none d-sm-flex col">20%</li>
+                                                <li class="col"><small class="bg-success rounded text-white p-1">Done</small></li>
+                                                <li class="col">Azioni</li>
+                                            </ul> 
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="container-fluid">
+                                    <ul class="row py-1 border-bottom">
+                                        <li class="col"><img src="img/class-avatar.jpg" alt="Avatar"> Classe 75</li>
+                                        <li class="col-6 col-sm-8 col-md-8 col-lg-9 col-xl-8 text-center">
+                                            <ul class="row py-1">
+                                                <li class="d-none d-md-flex col">15 Feb 2021</li>
+                                                <li class="d-none d-sm-flex col">20%</li>
+                                                <li class="col"><small class="bg-success rounded text-white p-1">Done</small></li>
+                                                <li class="col">Azioni</li>
+                                            </ul> 
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="container-fluid">
+                                    <ul class="row py-1 border-bottom">
+                                        <li class="col"><img src="img/class-avatar.jpg" alt="Avatar"> Classe 75</li>
+                                        <li class="col-6 col-sm-8 col-md-8 col-lg-9 col-xl-8 text-center">
+                                            <ul class="row py-1">
+                                                <li class="d-none d-md-flex col">15 Feb 2021</li>
+                                                <li class="d-none d-sm-flex col">20%</li>
+                                                <li class="col"><small class="bg-success rounded text-white p-1">Done</small></li>
+                                                <li class="col">Azioni</li>
+                                            </ul> 
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="container-fluid">
+                                    <ul class="row py-1 border-bottom">
+                                        <li class="col"><img src="img/class-avatar.jpg" alt="Avatar"> Classe 75</li>
+                                        <li class="col-6 col-sm-8 col-md-8 col-lg-9 col-xl-8 text-center">
+                                            <ul class="row py-1">
+                                                <li class="d-none d-md-flex col">15 Feb 2021</li>
+                                                <li class="d-none d-sm-flex col">20%</li>
+                                                <li class="col"><small class="bg-success rounded text-white p-1">Done</small></li>
+                                                <li class="col">Azioni</li>
+                                            </ul> 
+                                        </li>
+                                    </ul>
+                                </div>
+                        </div>
+
+
+                        <div id="faq" class="border rounded my-4">
+                            <h3 class="p-2 border-0 border-bottom">F.A.Q.</h3>
+                            <div class="container-fluid">
+                                <div class="row py-3 border-bottom justify-content-between">
+                                    <div class="col"> Come aggiungere un nuovo studente?</div>
+                                    <div class="col-1"><i class="fa-solid fa-chevron-down"></i></div>
+                                </div>
+                                <div class="row py-3 border-bottom justify-content-between">
+                                    <div class="col"> Come posso accedere alle informazioni del mio account?</div>
+                                    <div class="col-1"><i class="fa-solid fa-chevron-down"></i></div>
+                                </div>
+                                <div class="row py-3 border-bottom justify-content-between">
+                                    <div class="col"> Posso usare questa dashboard da mobile?</div>
+                                    <div class="col-1"><i class="fa-solid fa-chevron-down"></i></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div id="left_col" class="col-4"></div>
+
+                    <!-- RIGHT COLUMN -->
+
+                    <div id="right_col" class="col-md-12 col-lg-4">
+                        <div id="todo" class="border rounded my-4">
+                            <h3 class="p-2 border-0 border-bottom">Todo</h3>
+                            <div class="container">
+                                <div class="container-sm border rounded">
+                                    <div class="row py-2 border-bottom justify-content-between">
+                                        <div class="col"><input type="checkbox"> Kickoff nuove classi</div>
+                                    </div>
+                                    <div class="row py-2 border-bottom justify-content-between">
+                                        <div class="col"><input type="checkbox"> Lezione su Bootstrap 5 in classe #75</div>
+                                    </div>
+                                    <div class="row py-2 border-bottom justify-content-between">
+                                        <div class="col"><input type="checkbox"> Controllare username github studenti</div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
                 </div>
-            </div> -->
-
-
+            </div>
         </div>
         
     </main>
