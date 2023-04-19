@@ -29,6 +29,7 @@ small{
 /***************************************
 ************ TRANSITION ************
 ***************************************/
+
 #side_bar ul li, #side_bar div a{
     position: relative;
     left: 0;
@@ -38,12 +39,21 @@ small{
     left: 0.5rem;
 }
 
+#side_bar_sm ul li, #side_bar_sm div a{
+    position: relative;
+    left: 0;
+    transition: left 0.5s ease-in-out;
+}
+#side_bar_sm ul li:hover, #side_bar_sm div a:hover{
+    left: 0.5rem;
+}
+
 
 /***************************************
 ************ SITE SECTION ************
 ***************************************/
 
-/* HEADER */
+/******** HEADER **********/
 
 header{
     height: 4rem;
@@ -80,14 +90,14 @@ header .dropdown{
     cursor: pointer;
 }
 
-/* BOTTOM CONTAINER */
+/******** BOTTOM CONTAINER **********/
 
 #bottom_cont{
     height: 100vh;
     padding-top: 4rem;
 }
 
-/* SIDEBAR */
+/******** SIDE BAR **********/
 
 .side_bar{
     background-image: url(../img/sidebar-bg.png);
@@ -106,9 +116,17 @@ header .dropdown{
 }
 
 
-/* CONTENTS */
+/******** CONTENTS **********/
 
-/* TOP BAR */
+#contents{
+    width: 100%;
+    min-width: 300px;
+    background-color: var(--bs-gray-100);
+    color: var(--bs-black);
+    overflow-y: scroll;
+}
+
+/******** TOP BAR **********/
 
 #top_content_bar{
     background-color: var(--bs-blue);
@@ -139,18 +157,9 @@ header .dropdown{
     
 }
 
+/******** TWO COLUMN SECTION **********/
 
-/* 2 COLUMN SECTION */
-
-#contents{
-    width: 100%;
-    min-width: 300px;
-    background-color: var(--bs-gray-100);
-    color: var(--bs-black);
-    overflow-y: scroll;
-}
-
-/* LEFT BAR */
+/******** LEFT BAR **********/
 
 /* Next class */
 
@@ -171,16 +180,16 @@ header .dropdown{
     background-color: var(--bs-gray-300);
 }
 
-/* F.A.Q. */
+/* F.A.Q. accordion*/
 
 #faq button{
     background-color: var(--bs-gray-100);
     ;
 }
 
-/* RIGHT BAR */
+/******** RIGHT BAR **********/
 
-/* ACTIVE USER CONTAINER */
+/* Active user container */
 
 #active_users img{
     max-width: 100%;
