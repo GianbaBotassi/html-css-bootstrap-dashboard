@@ -26,8 +26,17 @@ small{
 }
 
 
-
-
+/***************************************
+************ TRANSITION ************
+***************************************/
+#side_bar ul li, #side_bar div a{
+    position: relative;
+    left: 0;
+    transition: left 0.5s ease-in-out;
+}
+#side_bar ul li:hover, #side_bar div a:hover{
+    left: 0.5rem;
+}
 
 
 /***************************************
@@ -39,7 +48,7 @@ small{
 header{
     height: 4rem;
     width: 100%;
-    background-color: var(--bs-gray-300);
+    background-color: var(--bs-white);
     position: fixed;
     z-index: 999;
     left: 0;
@@ -61,11 +70,14 @@ header ul li i:before{
     height: 2rem;
     vertical-align: middle;
 }
-header input{
-    background-color: black;
+header .form-control, header .searchbar{
+    background-color: var(--bs-gray-400);
 }
 header .fa-magnifying-glass{
     font-size: 1.1rem;
+}
+header .dropdown{
+    cursor: pointer;
 }
 
 /* BOTTOM CONTAINER */
@@ -101,8 +113,11 @@ header .fa-magnifying-glass{
 #top_content_bar{
     background-color: var(--bs-blue);
 }
-#top_content_bar #breadcrumb small{
+#breadcrumb small{
     background-color: var(--dark-blue);
+}
+#breadcrumb small:hover{
+    background-color: var(--bs-primary-text-emphasis);
 }
 #top_content_bar .plus{
     display: inline-flex;
@@ -116,6 +131,14 @@ header .fa-magnifying-glass{
 #offcanvasRight{
     width: 50%;
 }
+
+@media screen and (max-width:992px) {
+    #offcanvasRight{
+        width: 100%;
+    }
+    
+}
+
 
 /* 2 COLUMN SECTION */
 
@@ -144,7 +167,7 @@ header .fa-magnifying-glass{
     color: var(--bs-white);
     cursor: pointer;
 }
-#next_class .container-fluid:hover{
+#next_class .container-fluid.hovering:hover{
     background-color: var(--bs-gray-300);
 }
 
@@ -155,8 +178,6 @@ header .fa-magnifying-glass{
     ;
 }
 
-
-
 /* RIGHT BAR */
 
 /* ACTIVE USER CONTAINER */
@@ -166,19 +187,10 @@ header .fa-magnifying-glass{
 }
 
 
-
-
-
-
-
-
-
 /* DEBUG */
 
 
-/* [class*="col"]{
-    border:1px solid black;
-} */
+
 
 
 

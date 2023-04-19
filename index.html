@@ -17,22 +17,22 @@
 <body>
     <!-- HEADER -->
 
-    <header class="">
-        <nav class="navbar">  
+    <header class="d-flex align-items-center">
+        <nav class="container-fluid navbar">  
             <a class="navbar-brand px-3" href="#">
                 <div id="big_logo" class="col-auto d-none d-md-flex"><img src="img/logo.svg" alt="Big Logo"></div>
-                <div id="small_logo" class="col-auto d-md-none"><img src="img/mobile-logo.png" alt="Mobile Logo"></div>
+                <div id="small_logo" class="col-auto d-flex d-md-none"><img src="img/mobile-logo.png" alt="Mobile Logo"></div>
             </a>
-            <div class="col d-flex align-items-center bg-white rounded ">
+            <div class="searchbar col d-flex align-items-center rounded ">
                 <div class="px-2"><i class="fa-solid fa-magnifying-glass"></i></div>
                 <input class="form-control border-0 px-0" type="search" placeholder="Prova a cercare: Lezioni di Laravel">
             </div>
             <ul class="col-auto row g-3 px-3">
-                <li class="col d-none d-md-flex"><i class="fa-solid fa-list-ul"></i></li>
-                <li class="col d-none d-md-flex"><i class="fa-solid fa-circle-question"></i></li>
-                <li class="col d-none d-md-flex"><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                <li class="col d-none d-md-flex"><a href="#"><i class="fa-solid fa-list-ul"></i></li></a>
+                <li class="col d-none d-md-flex"><a href="#"><i class="fa-solid fa-circle-question"></i></li></a>
+                <li class="col d-none d-md-flex"><a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></li></a>
                 <li class="col dropdown">
-                    <div class="text-warning dropstart" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="text-warning dropstart cursor-pointer" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-bell text-warning"></i>
                     <div>
                     <ul class="dropdown-menu">
@@ -53,21 +53,20 @@
 
         <div id="side_bar" class="side_bar d-none d-md-flex flex-column justify-content-between">
             <ul>
-                
                     <li class="py-2">
-                        <a href="#" class="row">
+                        <a href="#" class="row align-items-center">
                         <i class="fa-solid fa-house col-3"></i>
                         <span class="pl-3 col">Home</span>
                     </a> 
                     </li>
                     <li class="py-2">
-                        <a href="#" class="row">
+                        <a href="#" class="row align-items-center">
                             <i class="fa-solid fa-chart-simple col-3"></i>
                             <span class="pl-3 col">Stats</span>
                         </a> 
                     </li>
                     <li class="py-2">
-                        <a href="#" class="row">
+                        <a href="#" class="row align-items-center">
                             <i class="fa-solid fa-signal col-3"></i>
                             <span class="pl-3 col">Signals</span>
                         </a> 
@@ -75,7 +74,7 @@
 
             </ul>
             <div>
-                <a href="#" class="row">
+                <a href="#" class="row align-items-center">
                     <i class="fa-solid fa-gear col-3"></i>
                     <span class="pl-3 col">Admin</span>
                 </a> 
@@ -107,8 +106,6 @@
                     </div>
 
                     <!-- OFF CANVAS -->
-
-                    <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button> -->
 
                     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                     <div class="offcanvas-header">
@@ -203,6 +200,8 @@
                     </div>
                     </div>
                     
+                    <!-- Breadcrumb -->
+
                     <div id="breadcrumb" class="col-12 col-md">
                         <div>
                             <h3 class="d-inline-block">Boolean</h3>
@@ -240,7 +239,7 @@
                                 <div class="container-fluid">
                                     <ul class="row py-1 text-secondary border-bottom">
                                         <li class="col"> Nome</li>
-                                        <li class="col-6 col-sm-8 col-md-8 col-lg-9 col-xl-8 text-center">
+                                        <li class="col-8 col-sm-8 col-md-8 col-lg-9 col-xl-8 text-center">
                                             <ul class="row py-1">
                                                 <li class="d-none d-md-block col">Data inizio</li>
                                                 <li class="d-none d-sm-block col">ROI</li>
@@ -250,10 +249,10 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="container-fluid">
+                                <div class="container-fluid hovering">
                                     <ul class="row py-1 border-bottom">
                                         <li class="col"><img src="img/class-avatar.jpg" alt="Avatar"> Classe 75</li>
-                                        <li class="col-6 col-sm-8 col-md-8 col-lg-9 col-xl-8 text-center">
+                                        <li class="col-8 col-sm-8 col-md-8 col-lg-9 col-xl-8 text-center">
                                             <ul class="row py-1">
                                                 <li class="d-none d-md-block col">15 Feb 2021</li>
                                                 <li class="d-none d-sm-block col">20%</li>
@@ -266,10 +265,10 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="container-fluid">
+                                <div class="container-fluid hovering">
                                     <ul class="row py-1 border-bottom">
                                         <li class="col"><img src="img/class-avatar.jpg" alt="Avatar"> Classe 76</li>
-                                        <li class="col-6 col-sm-8 col-md-8 col-lg-9 col-xl-8 text-center">
+                                        <li class="col-8 col-sm-8 col-md-8 col-lg-9 col-xl-8 text-center">
                                             <ul class="row py-1">
                                                 <li class="d-none d-md-block col">16 Feb 2021</li>
                                                 <li class="d-none d-sm-block col">20%</li>
@@ -281,10 +280,10 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="container-fluid">
+                                <div class="container-fluid hovering">
                                     <ul class="row py-1 border-bottom">
                                         <li class="col"><img src="img/class-avatar.jpg" alt="Avatar"> Classe 77</li>
-                                        <li class="col-6 col-sm-8 col-md-8 col-lg-9 col-xl-8 text-center">
+                                        <li class="col-8 col-sm-8 col-md-8 col-lg-9 col-xl-8 text-center">
                                             <ul class="row py-1">
                                                 <li class="d-none d-md-block col">17 Feb 2021</li>
                                                 <li class="d-none d-sm-block col">20%</li>
@@ -296,10 +295,10 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="container-fluid">
+                                <div class="container-fluid hovering">
                                     <ul class="row py-1 border-bottom">
                                         <li class="col"><img src="img/class-avatar.jpg" alt="Avatar"> Classe 78</li>
-                                        <li class="col-6 col-sm-8 col-md-8 col-lg-9 col-xl-8 text-center">
+                                        <li class="col-8 col-sm-8 col-md-8 col-lg-9 col-xl-8 text-center">
                                             <ul class="row py-1">
                                                 <li class="d-none d-md-block col">18 Feb 2021</li>
                                                 <li class="d-none d-sm-block col">20%</li>
@@ -311,10 +310,10 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="container-fluid">
+                                <div class="container-fluid hovering">
                                     <ul class="row py-1 border-bottom">
                                         <li class="col"><img src="img/class-avatar.jpg" alt="Avatar"> Classe 79</li>
-                                        <li class="col-6 col-sm-8 col-md-8 col-lg-9 col-xl-8 text-center">
+                                        <li class="col-8 col-sm-8 col-md-8 col-lg-9 col-xl-8 text-center">
                                             <ul class="row py-1">
                                                 <li class="d-none d-md-block col">19 Feb 2021</li>
                                                 <li class="d-none d-sm-block col">20%</li>
@@ -326,10 +325,10 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="container-fluid">
+                                <div class="container-fluid hovering">
                                     <ul class="row py-1 border-bottom">
                                         <li class="col"><img src="img/class-avatar.jpg" alt="Avatar"> Classe 80</li>
-                                        <li class="col-6 col-sm-8 col-md-8 col-lg-9 col-xl-8 text-center">
+                                        <li class="col-8 col-sm-8 col-md-8 col-lg-9 col-xl-8 text-center">
                                             <ul class="row py-1">
                                                 <li class="d-none d-md-block col">20 Feb 2021</li>
                                                 <li class="d-none d-sm-block col">20%</li>
@@ -341,10 +340,10 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="container-fluid">
+                                <div class="container-fluid hovering">
                                     <ul class="row py-1 border-bottom">
                                         <li class="col"><img src="img/class-avatar.jpg" alt="Avatar"> Classe 81</li>
-                                        <li class="col-6 col-sm-8 col-md-8 col-lg-9 col-xl-8 text-center">
+                                        <li class="col-8 col-sm-8 col-md-8 col-lg-9 col-xl-8 text-center">
                                             <ul class="row py-1">
                                                 <li class="d-none d-md-block col">21 Feb 2021</li>
                                                 <li class="d-none d-sm-block col">20%</li>
@@ -356,10 +355,10 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="container-fluid">
+                                <div class="container-fluid hovering">
                                     <ul class="row py-1 border-bottom">
                                         <li class="col"><img src="img/class-avatar.jpg" alt="Avatar"> Classe 82</li>
-                                        <li class="col-6 col-sm-8 col-md-8 col-lg-9 col-xl-8 text-center">
+                                        <li class="col-8 col-sm-8 col-md-8 col-lg-9 col-xl-8 text-center">
                                             <ul class="row py-1">
                                                 <li class="d-none d-md-block col">22 Feb 2021</li>
                                                 <li class="d-none d-sm-block col">20%</li>
