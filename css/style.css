@@ -13,6 +13,10 @@ ul{
     margin: 0;
     padding: 0;
 }
+a{
+    text-decoration: none;
+    color: inherit;
+}
 
 /***************************************
 ************ LAYOUT ************
@@ -60,6 +64,9 @@ header ul li i:before{
 header input{
     background-color: black;
 }
+header .fa-magnifying-glass{
+    font-size: 1.1rem;
+}
 
 /* BOTTOM CONTAINER */
 
@@ -74,14 +81,16 @@ header input{
     background-image: url(../img/sidebar-bg.png);
     background-color: var(--bs-dark);
     color: var(--bs-white);
+    font-size: 1rem;
 }
 #side_bar{
     min-width: 8rem;
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
 }
-#side_bar_xs{
+#side_bar_sm{
     min-width: 4rem;
     padding:1rem;
+    font-size: 1.3rem;
 }
 
 
@@ -104,6 +113,9 @@ header input{
     width: 2.5rem;
     margin-left: 1rem;
 }
+#offcanvasRight{
+    width: 50%;
+}
 
 /* 2 COLUMN SECTION */
 
@@ -117,14 +129,32 @@ header input{
 
 /* LEFT BAR */
 
+/* Next class */
+
 #left_col img{
     max-width: 100%;
     height: 2rem;
     width: 2rem;
 }
-#left_col h3{
+#left_col h3, #right_col h3{
     background-color: var(--bs-gray-200);
 }
+#next_class .fa-trash:hover, #next_class .fa-pen:hover{
+    background-color: var(--bs-gray-600);
+    color: var(--bs-white);
+    cursor: pointer;
+}
+#next_class .container-fluid:hover{
+    background-color: var(--bs-gray-300);
+}
+
+/* F.A.Q. */
+
+#faq button{
+    background-color: var(--bs-gray-100);
+    ;
+}
+
 
 
 /* RIGHT BAR */

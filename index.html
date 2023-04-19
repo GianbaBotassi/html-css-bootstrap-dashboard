@@ -6,9 +6,12 @@
     <title>Boolean Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google font link -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- Custom css link -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -20,15 +23,24 @@
                 <div id="big_logo" class="col-auto d-none d-md-flex"><img src="img/logo.svg" alt="Big Logo"></div>
                 <div id="small_logo" class="col-auto d-md-none"><img src="img/mobile-logo.png" alt="Mobile Logo"></div>
             </a>
-            <form class="col form-inline my-1">
-                <input class="form-control border-0" type="search" placeholder="Search" aria-label="Search">
-
-              </form>
-              <ul class="col-auto row g-3 px-3">
+            <div class="col d-flex align-items-center bg-white rounded ">
+                <div class="px-2"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <input class="form-control border-0 px-0" type="search" placeholder="Prova a cercare: Lezioni di Laravel">
+            </div>
+            <ul class="col-auto row g-3 px-3">
                 <li class="col d-none d-md-flex"><i class="fa-solid fa-list-ul"></i></li>
                 <li class="col d-none d-md-flex"><i class="fa-solid fa-circle-question"></i></li>
                 <li class="col d-none d-md-flex"><i class="fa-solid fa-ellipsis-vertical"></i></li>
-                <li class="col"><i class="fa-solid fa-bell text-warning"></i></li>
+                <li class="col dropdown">
+                    <div class="text-warning dropstart" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-bell text-warning"></i>
+                    <div>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Profilo</a></li>
+                      <li><a class="dropdown-item" href="#">Fatturazione</a></li>
+                      <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                </li>
             </ul>
           </nav> 
     </header>
@@ -41,19 +53,44 @@
 
         <div id="side_bar" class="side_bar d-none d-md-flex flex-column justify-content-between">
             <ul>
-                <li>Home</li>
-                <li>Stats</li>
-                <li>Signal</li>
+                
+                    <li class="py-2">
+                        <a href="#" class="row">
+                        <i class="fa-solid fa-house col-3"></i>
+                        <span class="pl-3 col">Home</span>
+                    </a> 
+                    </li>
+                    <li class="py-2">
+                        <a href="#" class="row">
+                            <i class="fa-solid fa-chart-simple col-3"></i>
+                            <span class="pl-3 col">Stats</span>
+                        </a> 
+                    </li>
+                    <li class="py-2">
+                        <a href="#" class="row">
+                            <i class="fa-solid fa-signal col-3"></i>
+                            <span class="pl-3 col">Signals</span>
+                        </a> 
+                    </li>
+
             </ul>
-            <div>Home</div>
+            <div>
+                <a href="#" class="row">
+                    <i class="fa-solid fa-gear col-3"></i>
+                    <span class="pl-3 col">Admin</span>
+                </a> 
+            </div>
         </div>
-        <div id="side_bar_xs" class="side_bar d-md-none d-flex flex-column justify-content-between">
-            <ul>
-                <li>cio</li>
-                <li>sdffds</li>
-                <li>dfs</li>
+
+        <!-- SIDEBAR SM -->
+        
+        <div id="side_bar_sm" class="side_bar d-md-none d-flex flex-column justify-content-between">
+            <ul class="text-center">
+                <li><i class="fa-solid fa-house"></i></li>
+                <li><i class="fa-solid fa-chart-simple"></i></li>
+                <li><i class="fa-solid fa-signal"></i></li>
             </ul>
-            <div>Home</div>
+            <div><i class="fa-solid fa-gear"></i></div>
         </div>
 
         <!-- CONTENTS -->
@@ -62,28 +99,128 @@
 
             <!-- TOP BAR -->
 
-            <div id="top_content_bar" class="col-12 row g-0 text-white px-1 py-3 g-3">
-                <div id="breadcrumb" class="col-12 col-md">
-                    <div>
-                        <h3 class="d-inline-block">Boolean</h3>
-                        <small class="rounded p-1">Piano blaze</small>    
+            <div id="top_content_bar" class="container-fluid">
+                <div class="col-12 row g-0 text-white px-2 py-3 g-3">
+                    <div class="col-12 col-md-auto order-md-2">
+                        <span>Nuovo Studente</span>
+                        <button class="btn btn-outline-light ms-4" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">+</button>
                     </div>
-                    <div>
-                        <small class="rounded p-1">3 app</small>
-                        <i class="fa-solid fa-angles-right"></i>
-                        <small class="d-lg-none rounded-circle py-1 px-2">+</small>
-                        <small class="d-none d-lg-inline rounded p-1">Boolean mobile app</small>
-                        <small class="d-none d-lg-inline rounded p-1">Boolean web app</small>
-                        <small class="d-none d-lg-inline rounded p-1">Boolean blog app</small>
+
+                    <!-- OFF CANVAS -->
+
+                    <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button> -->
+
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 id="offcanvasRightLabel">Inserisci un nuovo studente</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-                </div>
-                <div class="col-12 col-md">
-                    <div class="pb-2">Studenti online negli ultimi 30 minuti</div>
-                    <h3>125</h3>
-                </div>
-                <div class="col-12 col-md-auto">
-                    <span>Nuovo Studente</span>
-                    <span class="plus rounded border">+</span>
+                    <div class="offcanvas-body">
+                        <form>
+
+                            <div class="form-row row">
+                              <div class="form-group col-md-6">
+                                <label for="name">Nome</label>
+                                <input type="name" class="form-control" id="name" required>
+                              </div>
+                              <div class="form-group col-md-6">
+                                <label for="surname">Cognome</label>
+                                <input type="surname" class="form-control" id="surname" required>
+                              </div>
+                            </div>
+
+                            <div class="form-row row pt-2">
+                                <div class="form-group col-md-6">
+                                    <label for="email">Email</label>
+                                    <div class="input-group mb-1">
+                                      <div class="input-group-prepend">
+                                        <div class="input-group-text">@</div>
+                                      </div>
+                                      <input type="text" class="form-control" id="email" required>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                  <label for="password">Password</label>
+                                  <input type="password" class="form-control" id="password" pattern="[a-z0-9]{8,}" required>
+                                </div>
+                              </div>
+
+                              <div class="form-row row pt-2">
+                                <div class="form-group col-md-6">
+                                    <label for="secondary-email">Secondary Email</label>
+                                    <div class="input-group mb-1">
+                                      <div class="input-group-prepend">
+                                        <div class="input-group-text">@</div>
+                                      </div>
+                                      <input type="text" class="form-control" id="secondary-email" required>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                  <label for="password">Password</label>
+                                  <input type="password" class="form-control" id="password" pattern="[a-z0-9]{8,}" required>
+                                </div>
+                              </div>
+
+                            <div class="form-group pt-2">
+                              <label for="address">Indirizzo</label>
+                              <input type="text" class="form-control" id="address" required>
+                            </div>
+                            <div class="form-row row">
+                              <div class="form-group col-md-6">
+                                <label for="inputCity">Città</label>
+                                <input type="text" class="form-control" id="inputCity" required>
+                              </div>
+                              <div class="form-group col-md-4">
+                                <label for="inputState">Stato</label>
+                                <select id="inputState" class="form-control form-select" required>
+                                  <option selected>Scegli...</option>
+                                  <option>Torino</option>
+                                  <option>Milano</option>
+                                  <option>Venezia</option>
+                                  <option>Napoli</option>
+                                </select>
+                              </div>
+                              <div class="form-group col-md-2">
+                                <label for="inputZip">CAP</label>
+                                <input type="text" class="form-control" id="inputZip" pattern="[0-9]{5}" required>
+                              </div>
+                            </div>
+                            <div class="form-group pt-2">
+                                <label for="file">Foto</label>
+                                <input type="file" class="form-control" id="file">
+                              </div>
+                            <div class="form-group pt-2">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                                <label class="form-check-label" for="gridCheck">
+                                  Seleziona per proseguire
+                                </label>
+                              </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                            <button type="reset"class="btn btn-warning mt-2">Svuota</button>
+                          </form>
+                    </div>
+                    </div>
+                    
+                    <div id="breadcrumb" class="col-12 col-md">
+                        <div>
+                            <h3 class="d-inline-block">Boolean</h3>
+                            <small class="rounded ms-1 p-1">Piano blaze</small>    
+                        </div>
+                        <div>
+                            <small class="rounded p-1">3 app</small>
+                            <i class="fa-solid fa-angles-right"></i>
+                            <small class="d-lg-none rounded-circle py-1 px-2">+</small>
+                            <small class="d-none d-lg-inline rounded p-1">Boolean mobile app</small>
+                            <small class="d-none d-lg-inline rounded p-1">Boolean web app</small>
+                            <small class="d-none d-lg-inline rounded p-1">Boolean blog app</small>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md">
+                        <div class="pb-2">Studenti online negli ultimi 30 minuti</div>
+                        <h3>125</h3>
+                    </div>
                 </div>
             </div>
 
@@ -121,7 +258,10 @@
                                                 <li class="d-none d-md-block col">15 Feb 2021</li>
                                                 <li class="d-none d-sm-block col">20%</li>
                                                 <li class="col"><small class="bg-success rounded text-white p-1">Done</small></li>
-                                                <li class="col">Azioni</li>
+                                                <li class="col text-secondary">
+                                                    <i class="fa-solid fa-pen d-inline-block border rounded me-2 p-2 btn-outline-secondary"></i>
+                                                    <i class="fa-solid fa-trash border rounded p-2"></i>
+                                                </li>
                                             </ul> 
                                         </li>
                                     </ul>
@@ -134,8 +274,10 @@
                                                 <li class="d-none d-md-block col">16 Feb 2021</li>
                                                 <li class="d-none d-sm-block col">20%</li>
                                                 <li class="col"><small class="bg-success rounded text-white p-1">Done</small></li>
-                                                <li class="col">Azioni</li>
-                                            </ul> 
+                                                <li class="col text-secondary">
+                                                    <i class="fa-solid fa-pen d-inline-block border rounded me-2 p-2"></i>
+                                                    <i class="fa-solid fa-trash border rounded p-2"></i>
+                                                </li>                                            </ul> 
                                         </li>
                                     </ul>
                                 </div>
@@ -146,9 +288,11 @@
                                             <ul class="row py-1">
                                                 <li class="d-none d-md-block col">17 Feb 2021</li>
                                                 <li class="d-none d-sm-block col">20%</li>
-                                                <li class="col"><small class="bg-success rounded text-white p-1">Done</small></li>
-                                                <li class="col">Azioni</li>
-                                            </ul> 
+                                                <li class="col"><small class="bg-warning rounded text-white p-1">Process</small></li>
+                                                <li class="col text-secondary">
+                                                    <i class="fa-solid fa-pen d-inline-block border rounded me-2 p-2"></i>
+                                                    <i class="fa-solid fa-trash border rounded p-2"></i>
+                                                </li>                                            </ul> 
                                         </li>
                                     </ul>
                                 </div>
@@ -160,8 +304,10 @@
                                                 <li class="d-none d-md-block col">18 Feb 2021</li>
                                                 <li class="d-none d-sm-block col">20%</li>
                                                 <li class="col"><small class="bg-success rounded text-white p-1">Done</small></li>
-                                                <li class="col">Azioni</li>
-                                            </ul> 
+                                                <li class="col text-secondary">
+                                                    <i class="fa-solid fa-pen d-inline-block border rounded me-2 p-2"></i>
+                                                    <i class="fa-solid fa-trash border rounded p-2"></i>
+                                                </li>                                            </ul> 
                                         </li>
                                     </ul>
                                 </div>
@@ -172,9 +318,11 @@
                                             <ul class="row py-1">
                                                 <li class="d-none d-md-block col">19 Feb 2021</li>
                                                 <li class="d-none d-sm-block col">20%</li>
-                                                <li class="col"><small class="bg-success rounded text-white p-1">Done</small></li>
-                                                <li class="col">Azioni</li>
-                                            </ul> 
+                                                <li class="col"><small class="bg-danger rounded text-white p-1">Failed</small></li>
+                                                <li class="col text-secondary">
+                                                    <i class="fa-solid fa-pen d-inline-block border rounded me-2 p-2"></i>
+                                                    <i class="fa-solid fa-trash border rounded p-2"></i>
+                                                </li>                                            </ul> 
                                         </li>
                                     </ul>
                                 </div>
@@ -186,8 +334,10 @@
                                                 <li class="d-none d-md-block col">20 Feb 2021</li>
                                                 <li class="d-none d-sm-block col">20%</li>
                                                 <li class="col"><small class="bg-success rounded text-white p-1">Done</small></li>
-                                                <li class="col">Azioni</li>
-                                            </ul> 
+                                                <li class="col text-secondary">
+                                                    <i class="fa-solid fa-pen d-inline-block border rounded me-2 p-2"></i>
+                                                    <i class="fa-solid fa-trash border rounded p-2"></i>
+                                                </li>                                            </ul> 
                                         </li>
                                     </ul>
                                 </div>
@@ -198,9 +348,11 @@
                                             <ul class="row py-1">
                                                 <li class="d-none d-md-block col">21 Feb 2021</li>
                                                 <li class="d-none d-sm-block col">20%</li>
-                                                <li class="col"><small class="bg-success rounded text-white p-1">Done</small></li>
-                                                <li class="col">Azioni</li>
-                                            </ul> 
+                                                <li class="col"><small class="bg-danger rounded text-white p-1">Failed</small></li>
+                                                <li class="col text-secondary">
+                                                    <i class="fa-solid fa-pen d-inline-block border rounded me-2 p-2"></i>
+                                                    <i class="fa-solid fa-trash border rounded p-2"></i>
+                                                </li>                                            </ul> 
                                         </li>
                                     </ul>
                                 </div>
@@ -212,8 +364,10 @@
                                                 <li class="d-none d-md-block col">22 Feb 2021</li>
                                                 <li class="d-none d-sm-block col">20%</li>
                                                 <li class="col"><small class="bg-success rounded text-white p-1">Done</small></li>
-                                                <li class="col">Azioni</li>
-                                            </ul> 
+                                                <li class="col text-secondary">
+                                                    <i class="fa-solid fa-pen d-inline-block border rounded me-2 p-2"></i>
+                                                    <i class="fa-solid fa-trash border rounded p-2"></i>
+                                                </li>                                            </ul> 
                                         </li>
                                     </ul>
                                 </div>
@@ -224,18 +378,38 @@
                         <div id="faq" class="border rounded my-4">
                             <h3 class="p-2 border-0 border-bottom">F.A.Q.</h3>
                             <div class="container-fluid">
-                                <div class="row py-3 border-bottom justify-content-between">
-                                    <div class="col"> Come aggiungere un nuovo studente?</div>
-                                    <div class="col-1"><i class="fa-solid fa-chevron-down"></i></div>
-                                </div>
-                                <div class="row py-3 border-bottom justify-content-between">
-                                    <div class="col"> Come posso accedere alle informazioni del mio account?</div>
-                                    <div class="col-1"><i class="fa-solid fa-chevron-down"></i></div>
-                                </div>
-                                <div class="row py-3 border-bottom justify-content-between">
-                                    <div class="col"> Posso usare questa dashboard da mobile?</div>
-                                    <div class="col-1"><i class="fa-solid fa-chevron-down"></i></div>
-                                </div>
+                                <div class="accordion accordion-flush" id="faq">
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                            Come aggiungere un nuovo studente?
+                                        </button>
+                                      </h2>
+                                      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#faq">
+                                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                                      </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header" id="flush-headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                            Come posso accedere alle informazioni del mio account?
+                                        </button>
+                                      </h2>
+                                      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#faq">
+                                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                                      </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header" id="flush-headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                            Posso usare questa dashboard da mobile?
+                                        </button>
+                                      </h2>
+                                      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#faq">
+                                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                                      </div>
+                                    </div>
+                                  </div>
                             </div>
                         </div>
                     </div>
@@ -246,9 +420,9 @@
 
                         <!-- TODO CONTAINER -->
 
-                        <div id="todo" class="border rounded my-4">
+                        <div id="todo" class="border rounded">
                             <h3 class="p-2 border-0 border-bottom">Todo</h3>
-                            <div class="container-fluid">
+                            <div class="container-fluid pb-2">
                                 <div class="container-fluid border rounded">
                                     <div class="py-2 border-bottom">
                                         <input type="checkbox"> Kickoff nuove classi
@@ -256,7 +430,7 @@
                                     <div class="py-2 border-bottom">
                                         <input type="checkbox"> Lezione su Bootstrap 5 in classe #75
                                     </div>
-                                    <div class="py-2 border-bottom">
+                                    <div class="py-2">
                                         <input type="checkbox"> Controllare username github studenti
                                     </div>
                                 </div>
@@ -267,7 +441,7 @@
 
                         <div id="active_users" class="border rounded my-4">
                             <div class="container-fluid p-2">
-                                <div class="rounded border">
+                                <div class="rounded border pt-1">
                                     <div class="px-2 border-bottom">
                                         <img src="img/stats.jpeg" alt="Stats">
                                         <h6 class="pt-2">Utenti attivi</h6>
@@ -294,6 +468,6 @@
 
 
 <!-- Link JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
