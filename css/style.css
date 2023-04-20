@@ -161,7 +161,7 @@ header .dropdown{
 
 /******** LEFT BAR **********/
 
-/* Next class */
+/* Next classes table */
 
 #left_col img{
     max-width: 100%;
@@ -171,12 +171,12 @@ header .dropdown{
 #left_col h3, #right_col h3{
     background-color: var(--bs-gray-200);
 }
-#next_class .fa-trash:hover, #next_class .fa-pen:hover{
+#next_classes .fa-trash:hover, #next_classes .fa-pen:hover{
     background-color: var(--bs-gray-600);
     color: var(--bs-white);
     cursor: pointer;
 }
-#next_class .container-fluid.hovering:hover{
+#next_classes tbody tr:hover{
     background-color: var(--bs-gray-300);
 }
 
